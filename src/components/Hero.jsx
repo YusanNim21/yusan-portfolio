@@ -44,7 +44,7 @@ export default function Hero() {
         <motion.div variants={itemVariants} className="flex justify-center mb-6">
           <div className="flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 px-4 py-1.5 rounded-full text-sm font-mono font-medium">
             <Terminal size={16} />
-            <span>Open for 2026 Internships</span>
+            <span>DevOps & Full-Stack Developer</span>
           </div>
         </motion.div>
 

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { video } from 'framer-motion/client';
 import { FiGithub, FiExternalLink, FiYoutube } from 'react-icons/fi';
 
 const projects = [
@@ -18,14 +17,6 @@ const projects = [
     githubLink: "https://github.com/YusanNim21/LibraryOS",
     videoLink: "https://youtu.be/qLoGAdh1Giw?si=ekKNJtUtLkHS5r5y",
     image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2070&auto=format&fit=crop" 
-  },
-  {
-    title: "E-Commerce Price Scraper",
-    description: "An automated Python pipeline that extracts, normalizes, and compares product pricing data across multiple supermarket web platforms.",
-    tech: ["Python", "BeautifulSoup", "Data Automation"],
-    liveLink: "#",
-    githubLink: "https://github.com/yusannim21",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
   }
 ];
 
@@ -38,12 +29,12 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto"
+        className="max-w-5xl mx-auto"
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Featured Work</h2>
         <div className="w-20 h-1 bg-blue-500 mb-12"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {projects.map((project, index) => (
             <motion.div 
@@ -63,12 +54,9 @@ export default function Projects() {
                 />
               </div>
 
-              {/* Added flex-grow so the buttons always align at the bottom */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
                 
-                {/* line-clamp-3 ensures text never exceeds 3 lines */}
-                {/* <p className="text-neutral-400 text-sm mb-6 line-clamp-3 flex-grow">{project.description}</p> */} 
                 <p className="text-neutral-400 text-sm mb-6 line-clamp-3 flex-grow">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -78,6 +66,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+                
                 <div className="flex gap-4 mt-auto">
                   <a 
                     href={project.githubLink} 
