@@ -64,7 +64,7 @@ export default function Hero() {
           I escape "tutorial hell" by taking complex ideas from local host, automating the deployment, and shipping them to production.
         </motion.p>
 
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center gap-4">
+<motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a 
             href="#projects"
             className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-neutral-200 transition-colors duration-300 w-full sm:w-auto text-center"
@@ -72,13 +72,14 @@ export default function Hero() {
             View My Work
           </a>
           
-          <button 
-            onClick={() => alert("My 2026 DevOps Resume is currently compiling... check back soon!")}
+          <a 
+            href="/Yusan_Nuwarawewa_CV.pdf"
+            download="Yusan_Nuwarawewa_CV.pdf"
             className="flex items-center justify-center gap-2 px-8 py-3 bg-transparent border border-neutral-700 text-white font-semibold rounded-lg hover:border-neutral-500 hover:bg-neutral-800/50 transition-all duration-300 w-full sm:w-auto text-center"
           >
             <Download size={18} className="text-neutral-400" />
             Download CV
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </section>
